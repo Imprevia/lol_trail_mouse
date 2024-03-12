@@ -1,10 +1,11 @@
 import cv2
-import pyautogui
+from PIL import ImageGrab
 import numpy as np
 
 template_path = 'icon.png'
 def desktop_screenshots():
-    img = pyautogui.screenshot().convert('RGB')
+    img = ImageGrab.grab()
+    img.save(template_path)
     frame = np.array(img)
 
     # 显示结果
