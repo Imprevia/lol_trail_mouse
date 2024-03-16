@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 plt.rcParams['image.cmap'] = 'gray'
 
 # stags = cv2.imread('pig.jpg')
-stags = cv2.imread('123.png')
+stags = cv2.imread('lol.png')
 
 
 def select_colorsp(img, colorsp='gray'):
@@ -124,7 +124,7 @@ if __name__ == '__main__':
     bboxes = get_filtered_bboxes(thresh_stags, min_area_ratio=0.001)
     filtered_ann_stags = draw_annotations(stags, bboxes, thickness=2, color=(0, 0, 255))
     # Display.
-    display(stags, filtered_ann_stags,
+    display(red, filtered_ann_stags,
             name_l='Stags original infrared',
             name_r='Thresholded Stags',
             figsize=(20, 14))
